@@ -1,4 +1,16 @@
-<%= image.description %>
-<%= link_to 'Edit', edit_image_path(image)  %>
-<%= link_to 'Delete', image, method: :delete , data: { confirm: 'sure?' }  %>
-<br>
+
+  <div class="col-lg-4">
+    <figure class="figure">
+      <img src="https://farn.org.ar/wp-content/uploads/2013/12/cambio-clima%CC%81tico-400x300.jpg"
+           class="figure-img img-fluid rounded"
+           alt=""
+      >
+      <figcaption class="figure-caption">
+        <%= image.description %>
+        <%= link_to 'Edit', edit_image_path(image)  %>
+        <%= link_to 'Delete', image, method: :delete , data: { confirm: 'sure?' }  %>
+      </figcaption>
+    </figure>
+  </div>
+
+

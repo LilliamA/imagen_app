@@ -1,8 +1,9 @@
 <%= form_for @image , class: "" do |f| %>
-
-  <%= f.label :description %>
-  <br>
-  <%= f.text_field :description %>
-  <br>
-  <%= f.submit %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <br>
+    <%= f.text_field :description , class: "form-control" %>
+    <br>
+  </div>
+  <%= f.submit 'Save', class: "btn btn-primary" %>
 <%end %>
