@@ -28,11 +28,10 @@ class ImagesController < ApplicationController
     @image.save
 
     if @image.save
-      #redirect_to images_path(@image)
-      redirect_to action: "show", id: @image.id
-    else
-      render "new"
+      return redirect_to images_path
     end
+
+    render :new
   end
 
   def edit
