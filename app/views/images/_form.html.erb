@@ -1,22 +1,14 @@
-<%- if @image.errors.any? %>
-  <div class="alert alert-danger">
-    <h4 class="alert-heading">Ups!</h4>
-    <p>Prohibited this Image from being saved:</p>
-    <% @image.errors.full_messages.each do |msg| %>
-      <p><b><%= msg %></b></p>
-    <% end %>
-  </div>
-<%  end %>
-
-<%= form_for @image , :html => {:multipart => true} , class: "" do |f| %>
+<%= form_for @image , builder: CustomFormBuilder, :html => {:multipart => true} , class: "" do |f| %>
+  <%= f.form_error %>
   <div class="form-group">
     <%= f.label :description %>
     <%= f.text_field :description , class: "form-control" %>
+    <%= f.field_error :description %>
   </div>
   <div class="form-group">
     <%= f.label :picture %>
     <br>
     <%= f.file_field :picture , class: "" %>
   </div>
-  <%= f.submit 'Save', class: "btn btn-primary" %>
+  <%= f.submit t('save_button'), class: "btn btn-primary" %>
 <%end %>

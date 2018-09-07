@@ -1,5 +1,15 @@
 es:
   images:
-      image:
-        edit_link: 'Editar'
-        remove_link: 'Eliminar'
+    new:
+      form:
+        error: 'Ha ocurrido un error al crear tu %{model}'
+    edit:
+      form:
+        error: 'Ha ocurrido un error al editar tu %{model}'
+    image:
+      edit_link: 'Editar'
+      remove_link: 'Eliminar'
+    general:
+  save_button: 'Guardar'
+  create_tag: 'Crear Imagen'
+  edit_tag: 'Editar Imagen'
