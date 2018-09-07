@@ -1,5 +1,7 @@
 es:
   activerecord:
+    models:
+      image: 'Imagen'
     attributes:
       image:
         description: 'Descripción'

@@ -39,8 +39,10 @@ class ImagesController < ApplicationController
   end
 
   def update
-    @image.update image_params
-    redirect_to action: "show", id: @image.id
+    if ( @image.update(image_params) )
+      return redirect_to images_path
+    end
+    render :edit
   end
 
   #Interface Parametros Fuertes
