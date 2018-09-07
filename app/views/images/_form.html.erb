@@ -1,3 +1,13 @@
+<%- if @image.errors.any? %>
+  <div class="alert alert-danger">
+    <h4 class="alert-heading">Ups!</h4>
+    <p>Prohibited this Image from being saved:</p>
+    <% @image.errors.full_messages.each do |msg| %>
+      <p><b><%= msg %></b></p>
+    <% end %>
+  </div>
+<%  end %>
+
 <%= form_for @image , :html => {:multipart => true} , class: "" do |f| %>
   <div class="form-group">
     <%= f.label :description %>

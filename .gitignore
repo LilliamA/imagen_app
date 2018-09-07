@@ -20,4 +20,5 @@
 vendor
 vendor/*
 .idea/*
-tmp/*
+public/uploads/tmp/*
+public/uploads/image/picture/*
