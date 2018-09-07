@@ -1,0 +1,6 @@
+es:
+  activerecord:
+    attributes:
+      image:
+        description: 'Descripción'
+        picture: 'Imagen'
