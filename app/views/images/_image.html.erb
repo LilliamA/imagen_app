@@ -1,15 +1,14 @@
+<div class="col-lg-4">
+  <figure class="figure">
 
-  <div class="col-lg-4">
-    <figure class="figure">
+    <%= image_tag image.picture.medium.url , class: 'figure-img img-fluid rounded' ,style: 'border-solid: 1px;' %>
 
-      <%= image_tag image.picture.medium.url , class: 'figure-img img-fluid rounded' ,style: 'border-solid: 1px;' %>
-
-      <figcaption class="figure-caption">
-        <%= image.description %>
-        <%= link_to 'Edit', edit_image_path(image)  %>
-        <%= link_to 'Delete', image, method: :delete , data: { confirm: 'sure?' }  %>
-      </figcaption>
-    </figure>
-  </div>
+    <figcaption class="figure-caption">
+      <%= image.description %>
+      <%= link_to t('.edit_link'), edit_image_path(image)  %>
+      <%= link_to t('images.image.remove_link'), image, method: :delete , data: { confirm: 'sure?' }  %>
+    </figcaption>
+  </figure>
+</div>
 
 
