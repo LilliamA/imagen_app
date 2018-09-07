@@ -1,9 +1,12 @@
-<%= form_for @image , class: "" do |f| %>
+<%= form_for @image , :html => {:multipart => true} , class: "" do |f| %>
   <div class="form-group">
     <%= f.label :description %>
-    <br>
     <%= f.text_field :description , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :picture %>
     <br>
+    <%= f.file_field :picture , class: "" %>
   </div>
   <%= f.submit 'Save', class: "btn btn-primary" %>
 <%end %>

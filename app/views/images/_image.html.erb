@@ -1,10 +1,9 @@
 
   <div class="col-lg-4">
     <figure class="figure">
-      <img src="https://farn.org.ar/wp-content/uploads/2013/12/cambio-clima%CC%81tico-400x300.jpg"
-           class="figure-img img-fluid rounded"
-           alt=""
-      >
+
+      <%= image_tag image.picture.medium.url , class: 'figure-img img-fluid rounded' ,style: 'border-solid: 1px;' %>
+
       <figcaption class="figure-caption">
         <%= image.description %>
         <%= link_to 'Edit', edit_image_path(image)  %>
