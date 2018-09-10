@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
   end
 
   def index
-    @images = Image.all
+    @images = Image.where user_id: current_user.id
   end
 
   def show
@@ -24,7 +24,8 @@ class ImagesController < ApplicationController
 
   def create
     #render plain: params[:image].inspect
-    @image = Image.new(image_params)
+    #
+    @image = current_user.images.new image_params
     @image.save
 
     if @image.save

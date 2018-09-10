@@ -1,3 +1,9 @@
-<div class="d-flex justify-content-center mt-5">
-  <h1>Imagenes Publicas</h1>
-</div>
+<% if( !@images.empty? ) %>
+  <div class="row mt-5">
+    <%= render(:partial => "home/image", :collection =>  @images )%>
+  </div>
+<% else %>
+  <div class="row mt-5 d-flex justify-content-center">
+    <h3 style="color: rgba(102,102,102,0.68)">No se ha agregado Imagenes Publicas</h3>
+  </div>
+<% end %>
