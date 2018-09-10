@@ -9,12 +9,12 @@
       </div>
     </figcaption>
     <figcaption class="figure-caption d-flex justify-content-center">
-      <div class="col-lg-6">
-        <%= link_to content_tag('i', nil, class: 'icon-search icon-white')+' Like ', edit_image_path(image) , class: 'btn btn-primary btn-block' %>
+      <div class="col-lg-6 mr-lg-auto">
+        <%= link_to edit_image_path(image) , class: 'btn btn-primary btn-block' do %>
+          <%= fa_icon 'thumbs-up' %> Like
+        <% end %>
+      </div>
 
-      </div>
-      <div class="col-lg-6">
-      </div>
     </figcaption>
   </figure>
 </div>
