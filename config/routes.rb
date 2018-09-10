@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'home/index'
+
+
   devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
-
-      get 'home/index'
-
       resources :images
     end
 
