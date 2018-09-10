@@ -6,3 +6,4 @@ es:
       image:
         description: 'Descripción'
         picture: 'Imagen'
+        title: 'Título'

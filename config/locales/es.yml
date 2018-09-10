@@ -217,3 +217,11 @@ es:
       long: "%-d de %B de %Y %H:%M"
       short: "%-d de %b %H:%M"
     pm: pm
+  general:
+    home : 'Home'
+    Images : 'Imagenes'
+    sign-out : 'Salir'
+    my-images: 'Mis Imagenes'
+    add-images  : 'Agregar Imagen'
+    login : 'Ingresar'
+    sign-up: 'Registrarse'

@@ -1,5 +1,12 @@
 <%= form_for @image , builder: CustomFormBuilder, :html => {:multipart => true} , class: "" do |f| %>
   <%= f.form_error %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title , class: "form-control" %>
+    <%= f.field_error :title %>
+  </div>
+
   <div class="form-group">
     <%= f.label :description %>
     <%= f.text_field :description , class: "form-control" %>
@@ -9,6 +16,7 @@
     <%= f.label :picture %>
     <br>
     <%= f.file_field :picture , class: "" %>
+    <%= f.field_error :picture %>
   </div>
   <%= f.submit t('save_button'), class: "btn btn-primary" %>
 <%end %>

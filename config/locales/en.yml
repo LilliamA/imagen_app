@@ -31,3 +31,11 @@
 
 en:
   hello: "Hello world"
+  general:
+    home: 'Home'
+    Images: 'Images'
+    sign-out: 'Sign Out'
+    my-images: 'My Images'
+    add-images: 'Add Images'
+    login: 'Login'
+    sign-up: 'Sign Up'
