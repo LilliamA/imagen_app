@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180910164106) do
     t.datetime "updated_at", null: false
     t.string "picture"
     t.bigint "user_id"
-    t.boolean "private"
+    t.boolean "private_img"
     t.string "title"
     t.index ["user_id"], name: "index_images_on_user_id"
   end

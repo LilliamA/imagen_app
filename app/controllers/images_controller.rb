@@ -47,7 +47,7 @@ class ImagesController < ApplicationController
 
   #Interface Parametros Fuertes
   def image_params
-    params.require(:image).permit(:title, :description , :picture)
+    params.require(:image).permit(:title, :description , :picture , :private_img)
   end
 
 end
