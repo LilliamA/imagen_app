@@ -1,4 +1,12 @@
-<div class="row mt-5">
-  <%= render @images %>
-</div>
+<% if( !@images.empty? ) %>
+  <div class="row mt-5">
+    <%= render @images %>
+  </div>
+<% else %>
+  <div class="row mt-5 d-flex justify-content-center">
+    <h3 style="color: rgba(102,102,102,0.68)">No se ha agregado Imagenes</h3>
+  </div>
+<% end %>
+
+
 
