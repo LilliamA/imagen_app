@@ -2,6 +2,9 @@
   <div class="row mt-5">
     <%= render(:partial => "home/image", :collection =>  @images )%>
   </div>
+  <div class="row mt-5 d-flex justify-content-center">
+    <%= will_paginate @images , renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
 <% else %>
   <div class="row mt-5 d-flex justify-content-center">
     <h3 style="color: rgba(102,102,102,0.68)">No se ha agregado Imagenes Publicas</h3>
