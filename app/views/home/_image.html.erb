@@ -9,13 +9,18 @@
       </div>
     </figcaption>
     <figcaption class="figure-caption d-flex justify-content-center">
-      <div class="col-lg-6 mr-lg-auto">
-        <%= link_to edit_image_path(image) , class: 'btn btn-primary btn-block' do %>
-          <%= fa_icon 'thumbs-up' %> Like
+      <div class="col-lg-12 text-center">
+        <%= button_to  likes_path(id:image.id), method: :get , remote: true , class: 'btn btn-btn-light', id: "btn-#{image.id}" do %>
+          Me gusta
+          <% if @likes.detect{|w| w.id == image.id} %>
+            <%= fa_icon 'thumbs-up', id:"thumbs-up-#{image.id}" , class: "like" %>
+          <% else %>
+            <%= fa_icon 'thumbs-up', id:"thumbs-up-#{image.id}"  %>
+          <% end %>
         <% end %>
       </div>
-
     </figcaption>
   </figure>
 </div>
+
 

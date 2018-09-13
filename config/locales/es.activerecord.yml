@@ -7,3 +7,4 @@ es:
         description: 'Descripción'
         picture: 'Imagen'
         title: 'Título'
+        private_img: 'Tipo de Imagen'

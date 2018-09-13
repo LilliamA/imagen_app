@@ -1,3 +1,22 @@
+<div class="col-lg-12 mt-4 d-flex justify-content-end">
+  <%= form_for home_index_path, method: :get do |f| %>
+      <div class="form-row">
+
+        <div class="form-group">
+          <%= f.label t('general.order_by') %>
+          <%= f.select(:order_by, [['Likes Numbers', 1], ['Dates', 2]], {}, { :class => 'form-control' }) %>
+        </div>
+
+        <div class="form-group col-md-6">
+          <%= f.label t('general.search') %>
+          <%= f.text_field :search , class: "form-control" %>
+        </div>
+
+    </div>
+  <% end %>
+</div>
+
+
 <% if( !@images.empty? ) %>
   <div class="row mt-5">
     <%= render(:partial => "home/image", :collection =>  @images )%>
@@ -10,3 +29,20 @@
     <h3 style="color: rgba(102,102,102,0.68)">No se ha agregado Imagenes Publicas</h3>
   </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+    function toggle_like(id) {
+        $("#thumbs-up-"+id).toggleClass('like');
+
+    }
+
+    $(document).ready(function(){
+        $('.button_to').on('ajax:success', function(){
+            toggle_like($(this).children().attr('id').replace("btn-",""));
+        }).on('ajax:error',function(e, xhr, status, error){
+            alert("Ups.. We have an error when sending the data");
+        });
+    });
+</script>
+
+

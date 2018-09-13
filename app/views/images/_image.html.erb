@@ -6,6 +6,7 @@
         <p><b><%=t('activerecord.attributes.image.title')%>: </b><%= image.title %></p>
         <p><b><%=t('activerecord.attributes.image.description')%>: </b></p>
         <p><%= image.description %></p>
+        <p><b><%=t('activerecord.attributes.image.private_img')%>: </b><%= (image.private_img) ? t('general.public') : t('general.private') %></p>
       </div>
     </figcaption>
     <figcaption class="figure-caption d-flex justify-content-center">

@@ -225,3 +225,7 @@ es:
     add-images  : 'Agregar Imagen'
     login : 'Ingresar'
     sign-up: 'Registrarse'
+    public: 'Pública'
+    private: 'Privada'
+    order_by: 'Ordenar Por:'
+    search: 'Buscar:'

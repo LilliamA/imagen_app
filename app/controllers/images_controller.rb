@@ -29,12 +29,12 @@ class ImagesController < ApplicationController
     #render plain: params[:image].inspect
     #
     @image = current_user.images.new image_params
+    @image.user_id = current_user.id
     @image.save
 
     if @image.save
       return redirect_to images_path
     end
-
     render :new
   end
 
