@@ -1,13 +1,25 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to t('devise.sessions.new.sign_in'), new_session_path(resource_name) %><br />
+  <div class="row">
+    <div class="col-lg-12 d-flex justify-content-center mt-1 pt-1">
+      <%= link_to t('devise.sessions.new.sign_in'), new_session_path(resource_name) %>
+    </div>
+  </div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to t('devise.registrations.new.sign_up'), new_registration_path(resource_name) %><br />
+  <div class="row">
+    <div class="col-lg-12 d-flex justify-content-center mt-1 pt-1">
+      <%= link_to t('devise.registrations.new.sign_up'), new_registration_path(resource_name) %>
+    </div>
+  </div>
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to t('devise.passwords.new.forgot_your_password'), new_password_path(resource_name) %><br />
+  <div class="row">
+    <div class="col-lg-12 d-flex justify-content-center mt-1 pt-1">
+      <%= link_to t('devise.passwords.new.forgot_your_password'), new_password_path(resource_name) %>
+    </div>
+  </div>
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

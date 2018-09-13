@@ -1,11 +1,12 @@
-<div class="col-lg-4 mt-4">
+<div class="col-lg-4 mt-4 d-flex justify-content-center">
   <figure class="figure">
-    <%= image_tag image.picture.medium.url , class: 'figure-img img-fluid rounded' ,style: 'border-solid: 1px;' %>
+    <%= image_tag image.picture.thumb.url , class: 'figure-img img-fluid rounded' ,style: 'border-solid: 1px;' %>
     <figcaption class="figure-caption">
       <div class="col-lg-12">
         <p><b><%=t('activerecord.attributes.image.title')%>: </b><%= image.title %></p>
         <p><b><%=t('activerecord.attributes.image.description')%>: </b></p>
         <p><%= image.description %></p>
+        <p><b><%=t('activerecord.attributes.image.private_img')%>: </b><%= (image.private_img) ? t('general.public') : t('general.private') %></p>
       </div>
     </figcaption>
     <figcaption class="figure-caption d-flex justify-content-center">
