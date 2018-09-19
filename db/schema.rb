@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20180912173738) do
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "images", force: :cascade do |t|
     t.string "description"
     t.integer "likes_counter"
     t.datetime "created_at", null: false
@@ -24,14 +27,14 @@ ActiveRecord::Schema.define(version: 20180912173738) do
     t.index ["user_id"], name: "index_images_on_user_id"
   end
 
-  create_table "images_users", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "images_users", id: false, force: :cascade do |t|
     t.bigint "image_id", null: false
     t.bigint "user_id", null: false
     t.index ["image_id", "user_id"], name: "index_images_users_on_image_id_and_user_id"
     t.index ["user_id", "image_id"], name: "index_images_users_on_user_id_and_image_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
