@@ -19,7 +19,7 @@ class HomeController < ApplicationController
 
     if ( @search != "" && @order_by == "1")
       @images = Image.paginate( page: params[:page] , per_page: 3).order(id: :desc)
-                    .where("images.private_img = 1 AND images.title = ? OR images.description = ?", @search , @search)
+                    .where("images.private_img = true AND images.title = ? OR images.description = ?", @search , @search)
 
     end
 
