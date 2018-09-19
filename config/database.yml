@@ -81,5 +81,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  Host: ec2-54-225-241-25.compute-1.amazonaws.com
+  database: d11k7sbhgf0om5
+  user: qsvatdjkeiasca
+  port: 5432
+  password: 6430dc6dc5a13faa893abfc09b5413c1e4ba2809ca8094247d3ee0d34edae293
 
