@@ -2,7 +2,7 @@
   <%= form_for home_index_path, method: :get do |f| %>
       <div class="form-row">
 
-        <div class="form-group">
+        <div class="form-group col-md-6">
           <%= f.label t('general.order_by') %>
           <%= f.select(:order_by, [ ['Dates', 1] , ['Likes Numbers', 2] ], { :selected=> params[:order_by] }, { :class => 'form-control' , :id => "order_by" , :name => "order_by"   }) %>
         </div>
