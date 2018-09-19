@@ -15,6 +15,7 @@ module ImagenApp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     # config.autoload_paths += %W(#{config.root}/lib)
+    # https://github.com/rails/rails/issues/13142
     config.eager_load_paths << "#{Rails.root}/lib"
   end
 end
