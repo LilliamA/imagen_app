@@ -39,4 +39,9 @@ en:
     add-images: 'Add Images'
     login: 'Login'
     sign-up: 'Sign Up'
-
+    public: 'Public'
+    private: 'Private'
+    order_by: 'Order By:'
+    search: 'Search:'
+    numbers_likes: 'By Likes Numbers'
+    date: 'By Date'

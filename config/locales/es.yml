@@ -229,3 +229,5 @@ es:
     private: 'Privada'
     order_by: 'Ordenar Por:'
     search: 'Buscar:'
+    numbers_likes: 'Por Likes'
+    date: 'Por Fecha'

@@ -4,7 +4,7 @@
 
         <div class="form-group col-md-6">
           <%= f.label t('general.order_by') %>
-          <%= f.select(:order_by, [ ['Dates', 1] , ['Likes Numbers', 2] ], { :selected=> params[:order_by] }, { :class => 'form-control' , :id => "order_by" , :name => "order_by"   }) %>
+          <%= f.select(:order_by, [ [t('general.date'), 1] , [t('general.numbers_likes'), 2] ], { :selected=> params[:order_by] }, { :class => 'form-control' , :id => "order_by" , :name => "order_by"   }) %>
         </div>
 
         <div class="form-group col-md-6">
